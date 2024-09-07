@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <style>
+    #calc {
+      max-height: 500px;
+      max-width: 330px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid black;
+    }
+    #keys {
+      display: grid;
+      gap: 10px;
+      padding: 10px;
+      grid-template-columns: repeat(4, 1fr);
+      background-color: hsl(0, 0%, 20%);
+    }
+    .k {
+      height: 65px;
+      width: 65px;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50px;
+      background-color: hsl(0, 0%, 49%);
+      border: none;
+      cursor: pointer;
+    }
+    .k:hover {
+      background-color: hsl(0, 0%, 59%);
+    }
+    .k:active {
+      background-color: hsl(0, 0%, 69%);
+    }
+    #disp {
+      width: 100%;
+      border: none;
+      padding: 10px;
+      font-size: 3rem;
+      color: rgba(255, 255, 255, 0.712);
+      background-color: hsl(0, 0%, 36%);
+      font-family: sans-serif;
+      font-weight: bolder;
+    }
+    .opr {
+      background-color: hsla(39, 94%, 54%, 0.952);
+    }
+    .opr:hover {
+      background-color: hsl(39, 94%, 60%);
+    }
+    .opr:active {
+      background-color: hsl(39, 94%, 70%);
+    }
+  </style>
+
+  <script src="node.js"></script>
+
+  <body>
+    <div id="calc">
+      <input id="disp" type="text" readonly />
+      <div id="keys">
+        <button class="k opr" id="+" onclick="f()">+</button>
+        <button class="k" id="7" onclick="f()">7</button>
+        <button class="k" id="8" onclick="f()">8</button>
+        <button class="k" id="9" onclick="f()">9</button>
+        <button class="k opr" id="-" onclick="f()">-</button>
+        <button class="k" id="4" onclick="f()">4</button>
+        <button class="k" id="5" onclick="f()">5</button>
+        <button class="k" id="6" onclick="f()">6</button>
+        <button class="k opr" id="*" onclick="f()">*</button>
+        <button class="k" id="1" onclick="f()">1</button>
+        <button class="k" id="2" onclick="f()">2</button>
+        <button class="k" id="3" onclick="f()">3</button>
+        <button class="k opr" id="/" onclick="f()">/</button>
+        <button class="k" id="0" onclick="f()">0</button>
+        <button class="k" id="=" onclick="f()">=</button>
+        <button class="k" id="C" onclick="f()">C</button>
+      </div>
+    </div>
+  </body>
+</html>
