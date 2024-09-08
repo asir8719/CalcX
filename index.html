@@ -68,23 +68,52 @@
     <div id="calc">
       <input id="disp" type="text" readonly />
       <div id="keys">
-        <button class="k opr" id="+" onclick="f()">+</button>
-        <button class="k" id="7" onclick="f()">7</button>
-        <button class="k" id="8" onclick="f()">8</button>
-        <button class="k" id="9" onclick="f()">9</button>
-        <button class="k opr" id="-" onclick="f()">-</button>
-        <button class="k" id="4" onclick="f()">4</button>
-        <button class="k" id="5" onclick="f()">5</button>
-        <button class="k" id="6" onclick="f()">6</button>
-        <button class="k opr" id="*" onclick="f()">*</button>
-        <button class="k" id="1" onclick="f()">1</button>
-        <button class="k" id="2" onclick="f()">2</button>
-        <button class="k" id="3" onclick="f()">3</button>
-        <button class="k opr" id="/" onclick="f()">/</button>
-        <button class="k" id="0" onclick="f()">0</button>
-        <button class="k" id="=" onclick="f()">=</button>
-        <button class="k" id="C" onclick="f()">C</button>
+        <button onclick="appendToDisplay('+')" class="k opr" id="+">+</button>
+        <button onclick="appendToDisplay('7')" class="k button" id="7">
+          7
+        </button>
+        <button onclick="appendToDisplay('8')" class="k button" id="8">
+          8
+        </button>
+        <button onclick="appendToDisplay('9')" class="k button" id="9">
+          9
+        </button>
+        <button onclick="appendToDisplay('-')" class="k opr" id="-">-</button>
+        <button onclick="appendToDisplay('4')" class="k button" id="4">
+          4
+        </button>
+        <button onclick="appendToDisplay('5')" class="k button" id="5">
+          5
+        </button>
+        <button onclick="appendToDisplay('6')" class="k button" id="6">
+          6
+        </button>
+        <button onclick="appendToDisplay('*')" class="k opr" id="*">*</button>
+        <button onclick="appendToDisplay('1')" class="k button" id="1">
+          1
+        </button>
+        <button onclick="appendToDisplay('2')" class="k button" id="2">
+          2
+        </button>
+        <button onclick="appendToDisplay('3')" class="k button" id="3">
+          3
+        </button>
+        <button onclick="appendToDisplay('/')" class="k opr" id="/">/</button>
+        <button class="k" onclick="appendToDisplay('.')">.</button>
+        <button onclick="appendToDisplay('0')" class="k button" id="0">
+          0
+        </button>
+        <button onclick="clearDisplay('AC')" class="k button" id="AC">
+          AC
+        </button>
+        <button onclick="appendToDisplay('%') ;percent('%')" class="opr k">
+          %
+        </button>
+        <button class="k" onclick="appendToDisplay('00')">00</button>
+        <button class="k" id="C" onclick="c1()">C</button>
+        <button onclick="calculate('=')" class="k button" id="=">=</button>
       </div>
     </div>
+    <script src="node.js"></script>
   </body>
 </html>
